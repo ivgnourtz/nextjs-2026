@@ -12,14 +12,14 @@
 
   --color-primary-100: #e0fdf5;
   --color-primary-200: #a7f300;
-  --color-primary-300: #e0fdf5;
-  --color-primary-400: #e0fdf5;
-  --color-primary-500: #e0fdf5;
-  --color-primary-600: #e0fdf5;
-  --color-primary-700: #e0fdf5;
-  --color-primary-800: #e0fdf5;
-  --color-primary-900: #e0fdf5;
-  --color-primary-1000: #e0fdf5;
+  --color-primary-300: #6ee7b7;
+  --color-primary-400: #34d399;
+  --color-primary-500: #10b981;
+  --color-primary-600: #00d4aa;
+  --color-primary-700: #00a882;
+  --color-primary-800: #007a5e;
+  --color-primary-900: #004f3d;
+  --color-primary-1000: #00291f;
 
   --color-error-100: #fff1f0;
   --color-error-200: #ffd5d3;
@@ -72,20 +72,26 @@
   --font-primary: 'Plus Jakarta Sans', sans-serif;
   --font-quotes: 'Instrument Serif', serif;
   --font-mono: 'Source Code Pro', monospace;
-  --text-2xs: 10px 400;
-  --text-xs: 11px 400;
-  --text-sm: 13px 400;
-  --text-base: 14px 400;
-  --text-md: 15px 400;
-  --text-lg: 16px 400;
-  --text-xl: 18px 600;
-  --text-2xl: 20px 700;
-  --text-3xl: 24px 700;
-  --text-4xl: 30px 800;
-  --text-5xl: 36px 800;
-  --text-6xl: 48px 800;
-  --text-7xl: 60px 800;
-  --text-8xl: 72px 800;
+  --text-2xs: 10px;
+  --text-xs: 11px;
+  --text-sm: 13px;
+  --text-base: 14px;
+  --text-md: 15px;
+  --text-lg: 16px;
+  --text-xl: 18px;
+  --text-2xl: 20px;
+  --text-3xl: 24px;
+  --text-4xl: 30px;
+  --text-5xl: 36px;
+  --text-6xl: 48px;
+  --text-7xl: 60px;
+  --text-8xl: 72px;
+
+  --font-weight-default: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
 
   --spacing-sp-1: 4px;
   --spacing-sp-2: 8px;
@@ -111,6 +117,7 @@
   --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.35);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-auth-card: 0 20px 60px rgba(0, 0, 0, 0.45);
   --shadow-teal: 0 6px 24px rgba(0, 212, 170, 0.28);
   --shadow-coral: 0 6px 24px rgba(255, 107, 107, 28);
   --shadow-blue: 0 6px 24px rgba(91, 142, 255, 0.28);
@@ -231,7 +238,7 @@ body {
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-@layer base {
+/* @layer base {
   * {
     @apply border-border outline-ring/50;
   }
@@ -240,5 +247,28 @@ body {
   }
   html {
     @apply font-sans;
+  }
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero-badge {
+  animation: badge-glow 3s ease-in-out infinite;
+}
+
+.auth-card-shadow {
+  box-shadow: var(--shadow-auth-card);
+}
+
+@keyframes badge-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 8px rgba(0, 212, 170, 0.15);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(0, 212, 170, 0.3);
   }
 }
