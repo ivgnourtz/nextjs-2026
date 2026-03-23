@@ -1,0 +1,18 @@
+// Named exports for SVGs stored in `/public`.
+// Note: TypeScript files cannot live inside `/public`, so we re-export them from `src/lib`.
+export { default as iconFire } from '@/../public/icon-fire.svg'
+export { default as iconChat } from '@/../public/icon-chat.svg'
+export { default as iconBook } from '@/../public/icon-book.svg'
+export { default as iconStar } from '@/../public/icon-star.svg'
+export { default as iconDashboard } from '@/../public/icon-dashboard.svg'
+export { default as iconMic } from '@/../public/icon-mic.svg'
+export { default as iconPen } from '@/../public/icon-pen.svg'
+export { default as iconEdit } from '@/../public/icon-edit.svg'
+export { default as iconMicVolume } from '@/../public/icon-volume.svg'
+export { default as iconLock } from '@/../public/icon-lock.svg'
+export { default as iconArrowRight } from '@/../public/icon-arrow-right.svg'
+export { default as iconSend } from '@/../public/icon-send.svg'
+export { default as iconCheck } from '@/../public/icon-check.svg'
+export { default as iconZap } from '@/../public/icon-zap.svg'
+export { default as iconTrophy } from '@/../public/icon-trophy.svg'
+export { default as iconApple } from '@/../public/icon-apple.svg'
